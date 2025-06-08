@@ -19,4 +19,3 @@
 
 # Add luci-app-tailscale
 git clone -b main --single-branch https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
-sed -i '/\/etc\/init\.d\/tailscale/d;/\/etc\/config\/tailscale/d;' feeds/packages/net/tailscale/Makefile
