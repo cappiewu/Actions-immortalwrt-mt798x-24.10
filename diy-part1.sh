@@ -12,10 +12,15 @@
 
 # Uncomment a feed source
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-
-# Add a feed source
-# echo 'src-git istore https://github.com/linkease/istore;main' >>feeds.conf.default
 # echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
 
+# 添加易有云istore插件库
+echo -e "\nsrc-git istore https://github.com/linkease/istore;main" >> feeds.conf.default
+
 # Add luci-app-tailscale
+rm -rf package/luci-app-tailscale/ >nul
 git clone -b main --single-branch https://github.com/asvow/luci-app-tailscale package/luci-app-tailscale
+
+# Add luci-app-easymesh
+rm -rf package/luci-app-easymesh/ >nul
+git clone -b master --single-branch https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
