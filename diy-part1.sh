@@ -23,4 +23,5 @@ git clone -b main --single-branch https://github.com/asvow/luci-app-tailscale pa
 
 # Add luci-app-easymesh
 rm -rf package/luci-app-easymesh/ >nul
-git clone -b master --single-branch https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
+# git clone -b master --single-branch https://github.com/ntlf9t/luci-app-easymesh package/luci-app-easymesh
+git clone https://github.com/torguardvpn/luci-app-easymesh.git package/luci-app-easymesh
